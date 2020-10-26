@@ -10,6 +10,7 @@ namespace ConsoleProject
     {
         static void Main(string[] args)
         {
+            Console.Title = "Learning Console App";
             mainMenu();
         }
 
