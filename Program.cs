@@ -66,11 +66,21 @@ namespace ConsoleProject
 
         static void oddNumbers()
         {
+            Console.WriteLine("Podaj przedział od: ");
+            int minNum;
+            Int32.TryParse(Console.ReadLine(), out minNum);
+            Console.WriteLine(".. do: ");
+            int maxNum;
+            Int32.TryParse(Console.ReadLine(), out maxNum);
             // Wyświetlanie liczb niepatrzystych
-            for (int i = 0; i < 99; i++)
+            Console.WriteLine("Liczby nieparzyste w przedziale od {0} do {1} to:", minNum, maxNum);
+
+            for (int i = minNum; i <= maxNum; i++)
             {
-                Console.WriteLine(i++);
-                i++;
+                if (i % 2 != 0)
+                {
+                    Console.WriteLine(i);
+                }
             }
 
             Console.WriteLine("Wróć (b)");
@@ -82,8 +92,15 @@ namespace ConsoleProject
         static void multipliesOf3or5()
         {
             List<string> list = new List<string>();
+            Console.WriteLine("Podaj przedział od: ");
+            int minNum;
+            Int32.TryParse(Console.ReadLine(), out minNum);
+            Console.WriteLine(".. do: ");
+            int maxNum;
+            Int32.TryParse(Console.ReadLine(), out maxNum);
+            Console.WriteLine("Liczby podzielne przez 3 lub 5 w przedziale od {0} do {1} to: ", minNum, maxNum);
             //Wyświetlanie liczb podzielnych przez 3 lub 5
-            for (int a = 0; a <= 1000; a++)
+            for (int a = minNum; a <= maxNum; a++)
             {
                 if ((a % 3 == 0) ^ (a % 5 == 0))
                 {
